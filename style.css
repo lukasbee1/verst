@@ -43,13 +43,13 @@ a.active {
 	border-bottom: 5px solid white;
 }
 img {
-	height: 30%;
-	width: 30%;
+	height: 166px;
+	width: 166px;
 	margin-bottom: 25px;
 	
 
 }
-.container2 {
+.info {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;

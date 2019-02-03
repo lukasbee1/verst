@@ -1,0 +1,15 @@
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.form {
+    display: block;
+}
+.cl {
+    color: #D81919;
+}
+.info {
+    margin: 100px;
+    align-items: center;
+}
