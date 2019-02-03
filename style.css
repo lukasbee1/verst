@@ -1,0 +1,81 @@
+.main {
+	padding: 20px;
+	background: #333333;
+
+}
+.container {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	
+}
+.logo, .name {
+	margin-left: 54px; 
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	font-size: 36px;
+	color: #FFFFFF;
+	display: inline;
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+  }
+li {
+	display: inline;
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+	font-size: 24px;
+	color: #FFFFFF;
+	margin: 25px;
+	text-decoration: none;
+}	
+a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a.active {
+	border-bottom: 5px solid white;
+}
+img {
+	height: 30%;
+	width: 30%;
+	margin-bottom: 25px;
+	
+
+}
+.container2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.content {
+	
+	margin: 100px;
+}
+.name {
+	color: black;
+	font-weight: normal;
+	margin:0;
+}
+.photographer, .region {
+	font-family: Roboto Slab;
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	font-size: 18px;
+	margin:15px;
+}
+.region{
+	font-weight: 300;
+}
+
+
+
+
