@@ -1,6 +1,7 @@
 .content2 {
     display:flex;
-	justify-content: space-between;
+    justify-content: space-around;
+    
 }
 .info {
     margin: 100px;
@@ -29,4 +30,17 @@ img {
 .ti{
     width: 540px;
     height: 287px;
+}
+
+@media screen and (min-width: 376px) and (max-width:1024px){
+    .content2 {
+        flex-wrap: wrap;
+    }
+   .fi, .si, .ti {
+       width:100%;
+   }
+   .portfolio {
+       align-items: center;
+       margin: 0 auto;
+   }
 }

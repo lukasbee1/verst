@@ -46,8 +46,6 @@ img {
 	height: 166px;
 	width: 166px;
 	margin-bottom: 25px;
-	
-
 }
 .info {
 	display: flex;
@@ -72,8 +70,13 @@ img {
 	font-size: 18px;
 	margin:15px;
 }
-.region{
-	font-weight: 300;
+.navbar {
+	display: none;
+	position: absolute;
+	margin: 0 auto;
+}
+@media (max-width: 375px){
+	/*нужно превратить текст в меню  */
 }
 
 
