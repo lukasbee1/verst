@@ -2,46 +2,46 @@
 <html>
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="stylec.css" type="text/css"/>
+    <link rel="stylesheet" href="src/css/style.css" type="text/css"/>
 	<title>page</title>
 
 </head>
 <body>
-	<div class="main">
-		<div class="container">
-			<div class="logo">Liana Harper</div>		
-			<div class="menu">
-				<ul>
-					<li><a href="index.html">Main</a></li>
-					<li><a href="portfolio.html">Portfolio</a></li>
-					<li><a class="active" href="#">Contact</a></li>	
-				</ul>
-			</div>
-		</div>
-    </div>
+        <div class="header">
+                <div class="header__logo boldFont">Liana Harper</div>
+    
+                <div class="header__btn normalFont">
+                    <a class="header__btn-link" href="index.html">Main</a>
+                    <a class="header__btn-link" href="portfolio.html">Portfolio</a>
+                    <a class="header__btn-link active" href="contact.html">Contact</a>	
+                </div>
+        </div>
 
-  <div class="contact">
-        <div class="info">
-            <img src="Ellipse.png" alt="portrait">
-            <div class="name">
-                <p>Liana Harper</p>
-            </div>
-            <div class="phone name"></p>Phone: +1 23 456 789 </p></div>		
-            <div class="social name">
-                </p>
-                    <a class="cl" href="instagram.com">Instagram</a> //
-                    <a class="cl" href="facebook.com">Facebook</a> //
-                    <a class="cl" href="twitter.com">Twitter</a>    
-                </p>
-            </div>
+  <div class="container normalFont">
+        <div class="info-alignLeft ">
+                <img class="info__img" src="src/img/Ellipse.png" alt="portrait">
+                <div class="info__name">Liana Harper</div>
+                <div class="info__phone">Phone: +1 23 456 789</div>		
+                <div class="info__social">
+                        <a class="info__social-link" href="instagram.com">Instagram</a> 
+                        <a class="info__social-link" href="facebook.com">Facebook</a> 
+                        <a class="info__social-link" href="twitter.com">Twitter</a> 
+                </div>
         </div>
-        <div class="form">
-            <p><input type="text"  value =" Name"></p>
-            <p><input type="email" value=" E-Mail"></p>
-            <p><textarea rows="5" >Message</textarea></p>
+        
+        <form class="form">
+            <div class="form__line">
+                <input class="form__input" type="text" value ="Name">
+            </div>
+            <div class="form__line">
+                <input class="form__input" type="email" value="E-Mail">
+            </div>
+            <div class="form__line">
+                <textarea class="form__input form__input-area">Message</textarea>
+            </div>
+
             <button class="btn">Send</button>
-        </div>
+        </form>
     </div>
 </body>
 </html>
