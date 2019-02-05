@@ -12,7 +12,13 @@
 <body>
         <div class="header">
                 <div class="header__logo boldFont">Liana Harper</div>
-    
+
+                <div class="header__popup" id="myMenu">
+                    <div class="header__popup-btn normalFont">
+                        Menu
+                    </div>
+                </div>
+
                 <div class="header__btn normalFont">
                     <a class="header__btn-link" href="index.html">Main</a>
                     <a class="header__btn-link" href="portfolio.html">Portfolio</a>
@@ -20,8 +26,16 @@
                 </div>
         </div>
 
-  <div class="container normalFont">
-        <div class="info-alignLeft ">
+        
+
+        <div class="hidden normalFont" id="menu">
+            <a class="header__btn-link active" href="index.html">Main</a>
+            <a class="header__btn-link" href="portfolio.html">Portfolio</a>
+            <a class="header__btn-link" href="contact.html">Contact</a>	
+        </div>
+
+        <div class="container normalFont">
+            <div class="info-alignLeft ">
                 <img class="info__img" src="src/img/Ellipse.png" alt="portrait">
                 <div class="info__name">Liana Harper</div>
                 <div class="info__phone">Phone: +1 23 456 789</div>		
@@ -30,21 +44,33 @@
                         <a class="info__social-link" href="facebook.com">Facebook</a> 
                         <a class="info__social-link" href="twitter.com">Twitter</a> 
                 </div>
-        </div>
+            </div>
         
-        <form class="form">
-            <div class="form__line">
-                <input class="form__input" type="text" value ="Name">
-            </div>
-            <div class="form__line">
-                <input class="form__input" type="email" value="E-Mail">
-            </div>
-            <div class="form__line">
-                <textarea class="form__input form__input-area">Message</textarea>
-            </div>
+            <form class="form">
+                <div class="form__line">
+                    <input class="form__input" type="text" value ="Name">
+                </div>
+                <div class="form__line">
+                    <input class="form__input" type="email" value="E-Mail">
+                </div>
+                <div class="form__line">
+                    <textarea class="form__input form__input-area">Message</textarea>
+                </div>
 
-            <button class="btn">Send</button>
-        </form>
-    </div>
+                <button class="btn">Send</button>
+            </form>
+        </div>
+        <script>
+            window.onload = function () {
+                var menuStyle = getComputedStyle(menu);
+                myMenu.onclick = function() {
+                    if(menuStyle.display == "none") {
+                        menu.classList.add("active");
+                    } else {
+                        menu.classList.remove("active");
+                    }
+                }
+            }
+        </script>
 </body>
 </html>

@@ -13,12 +13,27 @@
 	<div class="header">
         <div class="header__logo boldFont">Liana Harper</div>
 
+        <div class="header__popup" id="myMenu">
+            <div class="header__popup-btn normalFont">
+                Menu
+            </div>
+        </div>
+
         <div class="header__btn normalFont">
             <a class="header__btn-link" href="index.html">Main</a>
             <a class="header__btn-link active" href="portfolio.html">Portfolio</a>
             <a class="header__btn-link" href="contact.html">Contact</a>	
         </div>
-</div>
+    </div>
+
+    
+
+    <div class="hidden normalFont" id="menu">
+		<a class="header__btn-link active" href="index.html">Main</a>
+		<a class="header__btn-link" href="portfolio.html">Portfolio</a>
+		<a class="header__btn-link" href="contact.html">Contact</a>	
+    </div>
+    
     <div class="container">
         <div class="info normalFont">
             <img class="info__img" src="src/img/Ellipse.png" alt="portrait">
@@ -28,12 +43,24 @@
         </div>
         
         <div class="portfolio">
-            <img class="portfolio__first" src="src/img/flo-pappert-201009-unsplash.png" alt="flo-pappert-201009-unsplash">
-            <img class="portfolio__sec" src="src/img/pixasquare-622732-unsplash.png" alt="pixasquare-622732-unsplash">
-            <img class="portfolio__third" src="src/img/omar-rodriguez-1192626-unsplash.png" alt="omar-rodriguez-1192626-unsplash">
-            <img class="portfolio__sec" src="src/img/pixasquare-622732-unsplash.png" alt="pixasquare-622732-unsplash">
-            <img class="portfolio__first" src="src/img/flo-pappert-201009-unsplash.png" alt="flo-pappert-201009-unsplash">        
+            <img class="portfolio__img portfolio__first" src="src/img/flo-pappert-201009-unsplash.png" alt="flo-pappert-201009-unsplash">
+            <img class="portfolio__img portfolio__sec" src="src/img/pixasquare-622732-unsplash.png" alt="pixasquare-622732-unsplash">
+            <img class="portfolio__img portfolio__third" src="src/img/omar-rodriguez-1192626-unsplash.png" alt="omar-rodriguez-1192626-unsplash">
+            <img class="portfolio__img portfolio__sec" src="src/img/pixasquare-622732-unsplash.png" alt="pixasquare-622732-unsplash">
+            <img class="portfolio__img portfolio__first" src="src/img/flo-pappert-201009-unsplash.png" alt="flo-pappert-201009-unsplash">        
         </div>
     </div>
+    <script>
+		window.onload = function () {
+			var menuStyle = getComputedStyle(menu);
+			myMenu.onclick = function() {
+				if(menuStyle.display == "none") {
+					menu.classList.add("active");
+				} else {
+					menu.classList.remove("active");
+				}
+			}
+		}
+	</script>
 </body>
 </html>
