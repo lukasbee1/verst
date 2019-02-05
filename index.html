@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 	<link rel="stylesheet" href="src/css/style.css" type="text/css"/>
 	<title>page</title>
@@ -10,11 +13,18 @@
 	<div class="header">
 			<div class="header__logo boldFont">Liana Harper</div>
 
+			<div class="header__popup" id="myMenu">
+				<div class="header__popup-btn normalFont">
+					Menu
+				</div>
+			</div>
+
 			<div class="header__btn normalFont">
 				<a class="header__btn-link active" href="#Main">Main</a>
 				<a class="header__btn-link" href="portfolio.html">Portfolio</a>
 				<a class="header__btn-link" href="contact.html">Contact</a>	
 			</div>
+			
 	</div>
 
 	<div class="container">
@@ -25,6 +35,17 @@
 			<div class="info__region">London, United Kingdom of Britain</div>
 		</div>
 	</div>
-	
+	<script>
+		window.onload = function () {
+			var menuStyle = getComputedStyle(menu);
+			myMenu.onclick = function() {
+				if(menuStyle.display == "none") {
+					menu.classList.add("active");
+				} else {
+					menu.classList.remove("active");
+				}
+			}
+		}
+	</script>
 </body>
 </html>
