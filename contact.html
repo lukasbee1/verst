@@ -10,29 +10,15 @@
 
 </head>
 <body>
-        <div class="header">
+        <nav class="nav normalFont">
                 <div class="header__logo boldFont">Liana Harper</div>
-
-                <div class="header__popup" id="myMenu">
-                    <div class="header__popup-btn normalFont">
-                        Menu
-                    </div>
-                </div>
-
-                <div class="header__btn normalFont">
-                    <a class="header__btn-link" href="index.html">Main</a>
-                    <a class="header__btn-link" href="portfolio.html">Portfolio</a>
-                    <a class="header__btn-link active" href="contact.html">Contact</a>	
-                </div>
-        </div>
-
-        
-
-        <div class="hidden normalFont" id="menu">
-            <a class="header__btn-link active" href="index.html">Main</a>
-            <a class="header__btn-link" href="portfolio.html">Portfolio</a>
-            <a class="header__btn-link" href="contact.html">Contact</a>	
-        </div>
+              <ul class="nav-menu">
+                  <li class="nav-menu__item header__btn-link"> <a href="index.html">Main</a></li>
+                  <li class="nav-menu__item header__btn-link"> <a href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-menu__item header__btn-link"> <a href="contact.html">Contact</a>	</li>
+              </ul>
+              <button class="mobile-switch normalFont">Menu</button> 
+              </nav>
 
         <div class="container normalFont">
             <div class="info-alignLeft ">
@@ -48,29 +34,32 @@
         
             <form class="form">
                 <div class="form__line">
-                    <input class="form__input" type="text" value ="Name">
+                    <input class="form__input" type="text" placeholder="Name">
                 </div>
                 <div class="form__line">
-                    <input class="form__input" type="email" value="E-Mail">
+                    <input class="form__input" type="email" placeholder="E-Mail">
                 </div>
                 <div class="form__line">
-                    <textarea class="form__input form__input-area">Message</textarea>
+                    <textarea class="form__input form__input-area" placeholder="Message"></textarea>
                 </div>
 
                 <button class="btn">Send</button>
             </form>
         </div>
         <script>
-            window.onload = function () {
-                var menuStyle = getComputedStyle(menu);
-                myMenu.onclick = function() {
-                    if(menuStyle.display == "none") {
-                        menu.classList.add("active");
+
+                let isOpen = false;
+                let menuElement = document.querySelector('.nav-menu');
+        
+                document.querySelector('.mobile-switch').addEventListener('click', () => {
+                    if (isOpen) {
+                        menuElement.classList.remove('open')
+                        isOpen = false;
                     } else {
-                        menu.classList.remove("active");
+                        menuElement.classList.add('open')
+                        isOpen = true;
                     }
-                }
-            }
-        </script>
+                })
+            </script>
 </body>
 </html>
