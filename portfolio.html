@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css"/>
-    <link rel="stylesheet" href="stylep.css" type="text/css"/>
+    <link rel="stylesheet" href="src/css/style.css" type="text/css"/>
 	<title>page</title>
 
 </head>
 <body>
-	<div class="main">
-		<div class="container">
-			<div class="logo">Liana Harper</div>		
-			<div class="menu">
-				<ul>
-					<li><a href="index.html">Main</a></li>
-					<li><a class="active" href="#Portfolio">Portfolio</a></li>
-					<li><a href="contact.html">Contact</a></li>	
-				</ul>
-			</div>
-		</div>
-    </div>
-    <div class="content2">
-        <div class="info">
-            <img src="Ellipse.png" alt="portrait">
-            <div class="name">
-               <p>Liana Harper</p>
-            </div>
-            <div class="Photographer">Photographer</div>		
-            <div class="region">
-                London, United Kingdom of Britain
-            </div>
-        </div>
-        <div class="portfolio">
-            <img class="fi" src="img/flo-pappert-201009-unsplash.png" alt="flo-pappert-201009-unsplash">
-            <img class="si" src="img/pixasquare-622732-unsplash.png" alt="pixasquare-622732-unsplash">
-            <img class="ti" src="img/omar-rodriguez-1192626-unsplash.png" alt="omar-rodriguez-1192626-unsplash">
-            <img class="si" src="img/pixasquare-622732-unsplash.png" alt="pixasquare-622732-unsplash">
-            <img class="fi" src="img/flo-pappert-201009-unsplash.png" alt="flo-pappert-201009-unsplash">        
-        </div>
-    </div>
+        <nav class="nav normalFont">
+                <div class="header__logo boldFont">Liana Harper</div>
+              <ul class="nav-menu">
+                  <li class="nav-menu__item header__btn-link"> <a href="index.html">Main</a></li>
+                  <li class="nav-menu__item header__btn-link"> <a href="portfolio.html">Portfolio</a></li>
+                  <li class="nav-menu__item header__btn-link"> <a href="contact.html">Contact</a>	</li>
+              </ul>
+              <button class="mobile-switch normalFont">Menu</button> 
+              </nav>
 
+    <div class="container">
+        <div class="info normalFont">
+            <img class="info__img" src="src/img/Ellipse.png" alt="portrait">
+            <div class="info__name">Liana Harper</div>
+            <div class="info__Photographer">Photographer</div>		
+            <div class="info__region">London, United Kingdom of Britain</div>
+        </div>
+        
+        <div class="portfolio">
+            <img class="portfolio__img portfolio__first" src="src/img/flo-pappert-201009-unsplash.png" alt="flo-pappert-201009-unsplash">
+            <img class="portfolio__img portfolio__sec" src="src/img/pixasquare-622732-unsplash.png" alt="pixasquare-622732-unsplash">
+            <img class="portfolio__img portfolio__third" src="src/img/omar-rodriguez-1192626-unsplash.png" alt="omar-rodriguez-1192626-unsplash">
+            <img class="portfolio__img portfolio__sec" src="src/img/pixasquare-622732-unsplash.png" alt="pixasquare-622732-unsplash">
+            <img class="portfolio__img portfolio__first" src="src/img/flo-pappert-201009-unsplash.png" alt="flo-pappert-201009-unsplash">        
+        </div>
+    </div>
+   <script>
+
+        let isOpen = false;
+        let menuElement = document.querySelector('.nav-menu');
+
+        document.querySelector('.mobile-switch').addEventListener('click', () => {
+            if (isOpen) {
+                menuElement.classList.remove('open')
+                isOpen = false;
+            } else {
+                menuElement.classList.add('open')
+                isOpen = true;
+            }
+        })
+    </script>
 </body>
 </html>
